@@ -1,15 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Study Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
+  <title>Daily Study Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 10px;
+      background-color: #f8f8f8;
+      color: #222;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    section {
+      background-color: #fff;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 5px 0;
+    }
+    li::before {
+      content: "⬜ ";
+      margin-right: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    .checkbox::before {
+      content: "⬜ ";
+    }
+    .important {
+      color: red;
+      font-weight: bold;
+    }
+    .session-title {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    @media print {
+      body {
+        background-color: #fff;
+      }
+      section {
+        box-shadow: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h2>📚 Study Checklist Tracker</h2>
-  <button onclick="notify()">🔔 Enable 6 AM Reminder</button>
+  <h1>🗂️ DAILY STUDY CHECKLIST (PRINTABLE)</h1>
+  <section>
+    <label>Name: ____________________</label>
+    <label>Date: ____________________</label>
+    <label>Target Hours: 6–6.5 hrs</label>
+  </section>
 
-  <script src="app.js"></script>
+  <section>
+    <div class="session-title">🌅 MORNING SESSION (5:30 – 8:30 AM) – 3 HRS</div>
+    <div class="important">Most important session (no phone)</div>
+    <ul>
+      <li>Revise yesterday’s topic (10 min)</li>
+      <li>Study new main topic (90 min)</li>
+      <li>Write short notes / formulas (30 min)</li>
+      <li>Practice 1 answer / 1 numerical (20 min)</li>
+    </ul>
+    <label>Subject Today: __________________________</label>
+  </section>
+
+  <section>
+    <div class="session-title">☀️ AFTERNOON SESSION (1:30 – 3:30 PM) – 2 HRS</div>
+    <ul>
+      <li>Revise theory (30 min)</li>
+      <li>Memorize important answers (45 min)</li>
+      <li>Write 2 short answers (30 min)</li>
+      <li>Mark doubts (15 min)</li>
+    </ul>
+    <label>Subject Today: __________________________</label>
+  </section>
+
+  <section>
+    <div class="session-title">🌇 EVENING SESSION (4:30 – 6:00 PM) – 1.5 HRS</div>
+    <ul>
+      <li>Light study / revision</li>
+      <li>IT / Language practice</li>
+      <li>Read important questions</li>
+      <li>Update formula / keyword list</li>
+    </ul>
+    <label>Subject Today: __________________________</label>
+  </section>
+
+  <section>
+    <div class="session-title">✍️ DAILY WRITING PRACTICE (MANDATORY)</div>
+    <ul>
+      <li>1 Long answer (OU format)</li>
+      <li>2 Short answers</li>
+      <li>Underlined keywords</li>
+      <li>Proper headings used</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="session-title">📊 ACCOUNTING (If Applicable Today)</div>
+    <ul>
+      <li>1 Numerical solved</li>
+      <li>Proper format followed</li>
+      <li>Working notes written</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="session-title">🔁 REVISION & SELF-CHECK</div>
+    <ul>
+      <li>Today’s topics revised once</li>
+      <li>Weak areas marked ⭐</li>
+      <li>Doubts written separately</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="session-title">🧠 HEALTH & DISCIPLINE</div>
+    <ul>
+      <li>Slept minimum 7 hrs</li>
+      <li>Phone usage &lt; 30 min during study</li>
+      <li>Water intake OK 💧</li>
+      <li>No stress before job</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="session-title">⭐ DAILY SELF-RATING</div>
+    <label>Today’s Performance: ⬜ Excellent | ⬜ Good | ⬜ Average | ⬜ Poor</label>
+    <label>Tomorrow’s Priority Subject: ______________________</label>
+  </section>
+
+  <section>
+    <div class="session-title">🏆 WEEKLY BONUS CHECKLIST (SUNDAY)</div>
+    <ul>
+      <li>Full revision of 1 subject</li>
+      <li>1 mock test written</li>
+      <li>Mistakes analyzed</li>
+      <li>Next week plan ready</li>
+    </ul>
+  </section>
 </body>
 </html>
